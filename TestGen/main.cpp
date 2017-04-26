@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <iostream>
 #include <cmath>
 #include <cstdio>
 #include <ctime>
@@ -21,6 +22,7 @@ void inline printVar(unsigned var) {
 
 int main(int argc, char *argv[]) {
     srand(time(NULL));
+    std::cout << "";
     unsigned int maxValue = (unsigned int) std::pow((long double) 2, 32) - 1; // Максимальное значение элемента
     unsigned int maxSizeDataset = (unsigned int) (std::pow((long double) 10, 7) * 2.5); // Максимальный размер массива
     unsigned int arraySize = 0;
@@ -63,6 +65,7 @@ int main(int argc, char *argv[]) {
             printVar(abs(rand() % maxValue));
         }
     }
+    std::cout << std::endl;
 
     return 0;
 }
